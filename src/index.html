@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1,minimum-scale=1,maximum-scale=1,
+    user-scalable=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前航 - 前端导航网站</title>
+    <style type="text/css">
+        .icon {
+          width: 1em;
+          height: 1em;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+          /* 引用iconfont的要用的，
+            通用css代码； */
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="globalHeader">
+    <form class="searchForm" method="get" action="https://www.baidu.com/s"
+    >
+    <!-- target="_blank"  复习：在新标签打开 -->
+        <input name="wd" type="text">
+        <button type="submit">搜索</button>
+        <!-- button 加上 type=“submit”，经验之谈 -->
+
+        <!-- 用户怎么解决点击搜索跳转网页？
+        1、用form表单就可以实现
+        2、form表单的功能是用来构造请求
+        3、用form标签包住input和button
+        -->
+    </form>
+    
+</header>
+<main class="globalMain">
+    <ul class="siteList">
+        <!-- <li>
+            <a href="https://www.acfun.cn">
+                <div class="site">
+                    <div class="logo">A</div>
+                    <div class="link">acfun.com</div>
+                </div>
+            </a>
+            注释：a标签内联元素，div块级元素
+            一般情况，块级元素不能放在内联元素里面，
+            但是a标签可以，特殊情况；
+        </li> -->
+        <!-- <li>
+            <a href="https://www.bilibili.com">
+                <div class="site">
+                    <div class="logo">
+                        <img src="./images/bilibili.png" alt="">
+                    </div>
+                    <div class="link">bilibili.com</div>
+                </div>
+            </a>
+        </li> -->
+        
+        <li class="last">
+            <div class="addButton">
+                <div class="icon-wrapper">
+                    <svg class="icon">
+                        <use xlink:href="#icon-add"></use>
+                    </svg>
+                </div>
+                <div class="text">新增网站</div>
+                <!-- 如何新增站点？
+                监听点击事件，用jQuery来实现。两种方法？
+                1、下载jQuery库放在src里面；
+                2、使用bootcdn，免费的前端开源项目 CDN 加速服务，复制jQuery的main.js版本，链接，放在HTML里面main.js的前面；
+                
+                3、引入jQuery ，测试是否引入成功
+                4、打印出jQuery，看是否存在，console.log(jQuery)-->
+            </div>
+        </li>
+    </ul>
+
+</main>
+<script src="//at.alicdn.com/t/font_1531331_vcthcy1wfzh.js"></script>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

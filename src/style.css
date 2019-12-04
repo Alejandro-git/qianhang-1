@@ -1,0 +1,195 @@
+/* css reset */
+*{box-sizing: border-box;}
+*:before, *:after{box-sizing: border-box;}
+*{margin: 0; padding: 0;}
+ul,ol{ list-style: none; }
+
+a{color: inherit; text-decoration: none;
+    /* a标签有默认样式，这里重新定义一下 */
+    /* 颜色: 继承; 文本—装饰： 无； */   
+}
+
+img{max-width: 100%; max-height: 100%;}
+
+body{background: #eee;
+    /* 虽然border的区域是上面一部分，
+    但是你给border加一个背景色，
+    浏览器会智能填充整个网页 */
+}
+.globalHeader{
+    /* border: 1px solid red ; */
+    margin: 20px;
+}
+
+@media(min-width: 500px){
+    .globalHeader{
+        margin: 60px 0px 100px;
+    }
+}
+
+.searchForm{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(min-width:500px){
+    /* 媒体查询：宽度小于五百像素的，就不处理*/
+    .searchForm{
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.searchForm > input{
+    width: 100%;
+    margin-right: 10px;
+    /* 控制中间间隙10px */
+    height: 40px;
+    padding: 0 10px;
+    /* 调整输入时的内容间隙，左右0；上下10px */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* 直接加是不行的，它有一个默认的样式，
+    要先去掉或者覆盖掉 */
+}
+.searchForm > button{
+    white-space: nowrap;
+    /* 不换行 */
+    padding: 0 28px;
+    /* 调整按钮内容的间隙，左右0；上下10px */
+    border: none;
+    border-radius: 4px;
+    /* 直接加是不行的，它有一个默认的样式，
+    要先去掉或者覆盖掉 */
+    background: #0282B9;
+    color: white;
+    font-size: 16px;    
+}
+
+.globalMain{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siteList{
+    /* border: 1px solid black; */
+
+    display: flex;
+    /* 在父项添加 */
+
+    flex-wrap: wrap;
+    /* flex 换行 */
+
+    margin: 20px;
+    /* border:1px solid red; */
+
+    justify-content: space-between;
+
+}
+
+@media(min-width:500px){
+    .siteList{
+        margin-left: auto;
+        margin-right: -25px;
+        justify-content: flex-start;
+    }
+}
+
+.siteList > li{
+    /* border: 1px solid red; */
+    margin-bottom: 10px;
+    /* 平均分布上下间隙10px */
+}
+
+@media(min-width:500px){
+    .siteList > li{
+        margin-right: 25px;
+    }
+}
+
+.siteList .site{
+    /* border: 1px solid red; */
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 方向上下分布 */
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    padding: 20px 0;
+
+    position: relative;
+   
+    cursor: pointer;
+    /* 鼠标在site这一区域，变为手型 */
+}
+.siteList .site > .logo{
+    /* border: 1px solid red; */
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    text-transform: upperCase;
+}
+.siteList .site > .link{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.siteList .site > .close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: none;
+
+    cursor: default;
+    /* 鼠标在site这一区域变为手型,到关闭哪里时又变回来 */
+}
+
+.siteList .site:hover > .close{
+    display: block;
+}
+
+.siteList .addButton{
+    border: 1px solid #ddd;
+    background: white;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+.siteList .addButton .icon{
+    width: 56px;
+    height: 56px;
+}
+
+.siteList .addButton .text{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.siteList .addButton .icon-wrapper{
+   /* border: 1px solid red; */
+   width: 64px;
+   height: 64px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+
